@@ -20,6 +20,7 @@ The Movie Search App is a web application that allows users to search for movies
 - Axios
 - OMDB API
 - Node v20.11.0
+
 ## Installation
 
 To run the Movie Search App locally, follow these steps:
@@ -30,10 +31,12 @@ To run the Movie Search App locally, follow these steps:
    git clone https://github.com/yourusername/movie-search-app.git
    cd movie-search-app
 
-2. Install the dependencies:
+2. Modified the `env.example` file to `.env`.
+
+3. Install the dependencies:
 
    npm install
 
-3. Start the development server:
+4. Start the development server:
 
    npm start

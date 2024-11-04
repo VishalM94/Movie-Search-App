@@ -6,7 +6,7 @@ interface SearchBarProps {
 }
 
 // Functional component definition
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+const SearchBar: React.FC<SearchBarProps> = React.memo(({ onSearch }) => {
   // State to hold the current search term
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -34,7 +34,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
       </button>
     </div>
   );
-};
+});
 
 // Exporting the SearchBar component for use in other parts of the application
 export default SearchBar;

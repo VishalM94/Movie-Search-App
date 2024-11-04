@@ -9,14 +9,14 @@ interface MovieListProps {
 }
 
 // Functional component definition
-const MovieList: FC<MovieListProps> = ({ movies }) => (
+const MovieList: FC<MovieListProps> = React.memo(({ movies }) => (
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
     {/* Mapping over the movies array to create a MovieCard for each movie */}
     {movies.map((movie) => (
       <MovieCard key={movie.imdbID} movie={movie} />
     ))}
   </div>
-);
+));
 
 // Exporting the MovieList component for use in other parts of the application
 export default MovieList;

@@ -7,7 +7,7 @@ interface MovieCardProps {
 }
 
 // Functional component definition
-const MovieCard: React.FC<MovieCardProps> = ({ movie }) => (
+const MovieCard: React.FC<MovieCardProps> = React.memo(({ movie }) => (
   <div className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden gap-auto">
     {/* Movie poster image */}
     <div className="flex justify-center">
@@ -25,7 +25,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => (
       <p>{movie.Type}</p>
     </span>
   </div>
-);
+));
 
 // Exporting the MovieCard component for use in other parts of the application
 export default MovieCard;
